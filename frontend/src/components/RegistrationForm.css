@@ -1,0 +1,115 @@
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #8a2be2; /* Roxo */
+  padding: 20px;
+ }
+
+ .registration-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .registration-form h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+ }
+
+ .error-message {
+  color: #dc3545;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  text-align: center;
+  width: 100%;
+ }
+
+ .registration-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ }
+
+ .registration-form form input[type="text"],
+ .registration-form form input[type="email"],
+ .registration-form form input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  margin-bottom: 15px;
+ }
+
+ .registration-form form button[type="submit"] {
+  width: 300px; /* Defina a largura do botão */
+  height: 50px; /* Defina a altura do botão */
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111; /* Cor de fundo inicial do botão */
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 1em; /* Mantenha o tamanho da fonte */
+  transition: background-color 0.3s ease; /* Mantenha a transição de cor */
+ }
+
+ .registration-form form button[type="submit"]:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px; /* Adicione border-radius ao pseudo-elemento também */
+ }
+
+ .registration-form form button[type="submit"]:hover:before {
+  opacity: 1;
+ }
+
+ .registration-form form button[type="submit"]:active {
+  background: #0056b3; /* Cor quando o botão é clicado */
+ }
+
+ @keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+ }
+
+ .registration-form p {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+  width: 100%;
+ }
+
+ .registration-form p a {
+  color: #007bff;
+  text-decoration: none;
+ }
+
+ .registration-form p a:hover {
+  text-decoration: underline;
+ }
